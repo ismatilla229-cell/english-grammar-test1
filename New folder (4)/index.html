@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Grammar Test — Grade 6 | Present Simple & Present Continuous</title>
+  <meta name="description" content="Interactive Grade 6 English grammar test and study guide for Present Simple and Present Continuous tenses. Includes 30 questions, hints, and detailed explanations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#home" class="brand-logo" id="nav-brand-logo">
+        <span class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            <path d="M10 8h6"></path>
+            <path d="M10 12h6"></path>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <span class="brand-title">GrammarQuest</span>
+          <span class="brand-sub">Grade 6 English</span>
+        </div>
+      </a>
+
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><button class="nav-btn active" data-target="home">Home</button></li>
+          <li><button class="nav-btn" data-target="guide">Grammar Guide</button></li>
+          <li><button class="nav-btn" data-target="test">Practice Test</button></li>
+          <li><button class="nav-btn" data-target="results" id="nav-results-btn" disabled>Results</button></li>
+        </ul>
+      </nav>
+
+      <div class="header-status">
+        <div class="student-pill" id="header-student-pill">
+          <span class="pill-dot"></span>
+          <span id="header-student-name">Student</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-content">
+    
+    <!-- ============================================== -->
+    <!-- SECTION 1: HOME PAGE                           -->
+    <!-- ============================================== -->
+    <section id="home-section" class="app-section active">
+      <div class="section-container">
+        <!-- Hero Banner -->
+        <div class="hero-card">
+          <div class="hero-badge">🎓 Grade 6 English Grammar Practice</div>
+          <h1 class="hero-title">English Grammar Test — Grade 6</h1>
+          <p class="hero-subtitle">
+            Master <strong>Present Simple</strong> and <strong>Present Continuous</strong> tenses! 
+            Explore signal words, learn grammar rules, test yourself with 30 interactive questions, 
+            and see your instant score with step-by-step explanations.
+          </p>
+
+          <!-- Student Profile & Quick Start Box -->
+          <div class="student-setup-card">
+            <div class="setup-header">
+              <span class="setup-icon">👤</span>
+              <div>
+                <h3>Student Information</h3>
+                <p>Enter your name to personalize your test score report:</p>
+              </div>
+            </div>
+            <div class="setup-input-group">
+              <input type="text" id="student-name-input" placeholder="Enter your name (e.g. Alex, Maya...)" maxlength="30" autocomplete="name">
+              <button class="btn btn-primary btn-large" id="home-start-test-btn">
+                <span>Start Practice Test</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Navigation Actions -->
+          <div class="hero-actions">
+            <button class="btn btn-secondary" id="home-open-guide-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              Read Grammar Guide First
+            </button>
+            <div class="hero-quick-meta">
+              <span>⏱️ Self-Paced</span>
+              <span>📝 30 Questions</span>
+              <span>💡 Hints Available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlights Grid -->
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon blue">📘</div>
+            <h3>Present Simple</h3>
+            <p>Learn how to talk about daily habits, routines, and permanent facts. Master <em>-s / -es</em> endings and <em>do / does</em>.</p>
+            <div class="tag-chips">
+              <span class="chip">always</span>
+              <span class="chip">usually</span>
+              <span class="chip">every day</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon purple">⚡</div>
+            <h3>Present Continuous</h3>
+            <p>Describe actions happening right now and temporary situations using <em>am / is / are + verb-ing</em>.</p>
+            <div class="tag-chips">
+              <span class="chip">now</span>
+              <span class="chip">right now</span>
+              <span class="chip">at the moment</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon green">🎯</div>
+            <h3>3-Level Practice</h3>
+            <p>Progress through 10 Easy, 10 Medium, and 10 Challenge questions designed specifically for Grade 6 learners.</p>
+            <div class="level-badges-preview">
+              <span class="badge badge-easy">Level 1: Easy</span>
+              <span class="badge badge-medium">Level 2: Medium</span>
+              <span class="badge badge-challenge">Level 3: Challenge</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon amber">🏆</div>
+            <h3>Instant Score & Feedback</h3>
+            <p>Get your final score out of 30 and percentage, plus full explanations for every single question.</p>
+            <div class="tag-chips">
+              <span class="chip">Detailed Review</span>
+              <span class="chip">Smart Hints</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Grammar Comparison Peek -->
+        <div class="quick-overview-card">
+          <div class="quick-header">
+            <h3>Quick Comparison at a Glance</h3>
+            <button class="link-btn" id="home-view-full-guide-link">View Full Grammar Guide &rarr;</button>
+          </div>
+          <div class="quick-comparison-table-wrapper">
+            <table class="simple-table">
+              <thead>
+                <tr>
+                  <th>Tense</th>
+                  <th>Core Meaning</th>
+                  <th>Key Signal Words</th>
+                  <th>Simple Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong class="text-blue">Present Simple</strong></td>
+                  <td>Routines, habits, facts, repeated actions</td>
+                  <td>always, usually, often, never, every day, on Mondays</td>
+                  <td><em>"She <strong>goes</strong> to school every day."</em></td>
+                </tr>
+                <tr>
+                  <td><strong class="text-purple">Present Continuous</strong></td>
+                  <td>Actions happening right now or temporary events</td>
+                  <td>now, right now, at the moment, today, Look!, Listen!</td>
+                  <td><em>"She <strong>is walking</strong> to school right now."</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SECTION 2: GRAMMAR GUIDE                       -->
+    <!-- ============================================== -->
+    <section id="guide-section" class="app-section">
+      <div class="section-container">
+        <!-- Guide Header -->
+        <div class="section-heading">
+          <span class="section-pill">📚 Study Center</span>
+          <h2 class="section-title">Grade 6 English Grammar Guide</h2>
+          <p class="section-desc">
+            Everything you need to know about the <strong>Present Simple</strong> and <strong>Present Continuous</strong> tenses, 
+            their differences, sentence structures, and signal words.
+          </p>
+        </div>
+
+        <!-- Guide Category Tabs -->
+        <div class="guide-tabs" role="tablist">
+          <button class="guide-tab-btn active" data-tab="simple">1. Present Simple</button>
+          <button class="guide-tab-btn" data-tab="continuous">2. Present Continuous</button>
+          <button class="guide-tab-btn" data-tab="comparison">3. Differences & Comparison</button>
+          <button class="guide-tab-btn" data-tab="rules">4. Spelling & Stative Verbs</button>
+        </div>
+
+        <!-- TAB CONTENT 1: PRESENT SIMPLE -->
+        <div class="guide-tab-content active" id="tab-simple">
+          <div class="guide-card main-rule-card blue-accent">
+            <div class="card-top-header">
+              <span class="badge badge-blue">Tense 1</span>
+              <h3>The Present Simple Tense</h3>
+            </div>
+            
+            <div class="guide-subblock">
+              <h4>🎯 When to Use Present Simple:</h4>
+              <ul class="styled-list">
+                <li><strong>Habits and daily routines:</strong> Things you do repeatedly (e.g., getting up, doing homework, brushing teeth).</li>
+                <li><strong>Regular occurrences:</strong> Things that happen regularly on specific days or times.</li>
+                <li><strong>Facts and general truths:</strong> Scientific laws, nature, and things that are always true.</li>
+              </ul>
+            </div>
+
+            <div class="guide-subblock">
+              <h4>🏗️ Sentence Structures:</h4>
+              <div class="structure-grid">
+                <div class="structure-card positive">
+                  <div class="st-tag">Positive (+)</div>
+                  <div class="st-formula">Subject + base verb <span class="highlight-formula">(add -s / -es for he, she, it)</span></div>
+                  <div class="st-example">
+                    • <em>I play football every day.</em><br>
+                    • <em>She goes to school by bus.</em>
+                  </div>
+                </div>
+
+                <div class="structure-card negative">
+                  <div class="st-tag">Negative (&minus;)</div>
+                  <div class="st-formula">Subject + <strong>do / does not</strong> + base verb</div>
+                  <div class="st-example">
+                    • <em>They do not watch TV in the morning.</em><br>
+                    • <em>He does not eat meat.</em>
+                  </div>
+                </div>
+
+                <div class="structure-card question">
+                  <div class="st-tag">Question (?)</div>
+                  <div class="st-formula"><strong>Do / Does</strong> + subject + base verb?</div>
+                  <div class="st-example">
+                    • <em>Do you like pizza?</em><br>
+                    • <em>Does he like English?</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-subblock">
+              <h4>✨ Examples:</h4>
+              <div class="examples-list">
+                <div class="example-item">
+                  <span class="ex-bullet">⚽</span>
+                  <span><strong>I play football every day.</strong> <small class="text-muted">(Daily routine)</small></span>
+                </div>
+                <div class="example-item">
+                  <span class="ex-bullet">🚌</span>
+                  <span><strong>She goes to school by bus.</strong> <small class="text-muted">(Regular habit; notice <em>go + -es</em> for 'she')</small></span>
+                </div>
+                <div class="example-item">
+                  <span class="ex-bullet">📺</span>
+                  <span><strong>They do not watch TV in the morning.</strong> <small class="text-muted">(Negative form with 'do not')</small></span>
+                </div>
+                <div class="example-item">
+                  <span class="ex-bullet">❓</span>
+                  <span><strong>Does he like English?</strong> <small class="text-muted">(Question form with 'Does'; verb 'like' stays in base form)</small></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-subblock">
+              <h4>🏷️ Guide Words / Signal Words for Present Simple:</h4>
+              <p class="guide-note">When you see these signal words, they almost always point to the <strong>Present Simple</strong>!</p>
+              <div class="signals-collection">
+                <span class="signal-tag">always</span>
+                <span class="signal-tag">usually</span>
+                <span class="signal-tag">often</span>
+                <span class="signal-tag">sometimes</span>
+                <span class="signal-tag">rarely</span>
+                <span class="signal-tag">never</span>
+                <span class="signal-tag">every day</span>
+                <span class="signal-tag">every week</span>
+                <span class="signal-tag">on Mondays</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB CONTENT 2: PRESENT CONTINUOUS -->
+        <div class="guide-tab-content" id="tab-continuous">
+          <div class="guide-card main-rule-card purple-accent">
+            <div class="card-top-header">
+              <span class="badge badge-purple">Tense 2</span>
+              <h3>The Present Continuous Tense</h3>
+            </div>
+
+            <div class="guide-subblock">
+              <h4>🎯 When to Use Present Continuous:</h4>
+              <ul class="styled-list">
+                <li><strong>Actions happening right now:</strong> Activities occurring at the exact moment of speaking.</li>
+                <li><strong>Temporary actions:</strong> Things happening around the present time (e.g., this week, today) that are not permanent.</li>
+              </ul>
+            </div>
+
+            <div class="guide-subblock">
+              <h4>🏗️ Sentence Structures:</h4>
+              <div class="structure-grid">
+                <div class="structure-card positive">
+                  <div class="st-tag">Positive (+)</div>
+                  <div class="st-formula">Subject + <strong>am / is / are</strong> + verb<strong>-ing</strong></div>
+                  <div class="st-example">
+                    • <em>I am doing my homework now.</em><br>
+                    • <em>She is reading a book at the moment.</em><br>
+                    • <em>They are playing football right now.</em>
+                  </div>
+                </div>
+
+                <div class="structure-card negative">
+                  <div class="st-tag">Negative (&minus;)</div>
+                  <div class="st-formula">Subject + <strong>am / is / are + not</strong> + verb<strong>-ing</strong></div>
+                  <div class="st-example">
+                    • <em>I am not sleeping.</em><br>
+                    • <em>He is not (isn't) listening to music.</em><br>
+                    • <em>We are not (aren't) watching TV.</em>
+                  </div>
+                </div>
+
+                <div class="structure-card question">
+                  <div class="st-tag">Question (?)</div>
+                  <div class="st-formula"><strong>Am / Is / Are</strong> + subject + verb<strong>-ing</strong>?</div>
+                  <div class="st-example">
+                    • <em>Are you listening to the teacher?</em><br>
+                    • <em>Is he reading a comic?</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-subblock">
+              <h4>✨ Examples:</h4>
+              <div class="examples-list">
+                <div class="example-item">
+                  <span class="ex-bullet">📝</span>
+                  <span><strong>I am doing my homework now.</strong> <small class="text-muted">('I' takes 'am' + doing)</small></span>
+                </div>
+                <div class="example-item">
+                  <span class="ex-bullet">📖</span>
+                  <span><strong>She is reading a book at the moment.</strong> <small class="text-muted">('She' takes 'is' + reading)</small></span>
+                </div>
+                <div class="example-item">
+                  <span class="ex-bullet">⚽</span>
+                  <span><strong>They are playing football right now.</strong> <small class="text-muted">('They' takes 'are' + playing)</small></span>
+                </div>
+                <div class="example-item">
+                  <span class="ex-bullet">👂</span>
+                  <span><strong>Are you listening to the teacher?</strong> <small class="text-muted">(Question form with 'Are' + you + listening)</small></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-subblock">
+              <h4>🏷️ Guide Words / Signal Words for Present Continuous:</h4>
+              <p class="guide-note">Look out for these clue words telling you something is happening at or around now!</p>
+              <div class="signals-collection purple-tags">
+                <span class="signal-tag purple">now</span>
+                <span class="signal-tag purple">right now</span>
+                <span class="signal-tag purple">at the moment</span>
+                <span class="signal-tag purple">today</span>
+                <span class="signal-tag purple">currently</span>
+                <span class="signal-tag purple alert-tag">Look!</span>
+                <span class="signal-tag purple alert-tag">Listen!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB CONTENT 3: COMPARISON TABLE -->
+        <div class="guide-tab-content" id="tab-comparison">
+          <div class="guide-card main-rule-card">
+            <div class="card-top-header">
+              <span class="badge badge-green">Comparison</span>
+              <h3>Present Simple vs. Present Continuous: Side-by-Side</h3>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="guide-comparison-table">
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th class="col-simple">Present Simple</th>
+                    <th class="col-continuous">Present Continuous</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Core Purpose</strong></td>
+                    <td>Routines, daily habits, scientific facts, things that never change or happen regularly.</td>
+                    <td>Actions in progress right now, or temporary events around today.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Positive Formula</strong></td>
+                    <td><code>Subject + base verb (+s/-es for he/she/it)</code></td>
+                    <td><code>Subject + am/is/are + verb-ing</code></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Negative Formula</strong></td>
+                    <td><code>Subject + do/does not + base verb</code></td>
+                    <td><code>Subject + am/is/are not + verb-ing</code></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Question Formula</strong></td>
+                    <td><code>Do / Does + subject + base verb?</code></td>
+                    <td><code>Am / Is / Are + subject + verb-ing?</code></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Signal Words</strong></td>
+                    <td>
+                      <div class="signal-chips-mini">
+                        <span>always</span><span>usually</span><span>often</span><span>sometimes</span>
+                        <span>rarely</span><span>never</span><span>every day</span><span>on Mondays</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="signal-chips-mini purple">
+                        <span>now</span><span>right now</span><span>at the moment</span><span>today</span>
+                        <span>currently</span><span>Look!</span><span>Listen!</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Contrast Sentence</strong></td>
+                    <td><em>"I usually <strong>walk</strong> to school..."</em> (Regular habit)</td>
+                    <td><em>"...but today I <strong>am riding</strong> my bicycle."</em> (Today only!)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Memory Helper Box -->
+            <div class="tip-banner">
+              <div class="tip-icon">💡</div>
+              <div class="tip-text">
+                <strong>Grade 6 Golden Rule:</strong> Ask yourself: <em>"Is this a routine or fact (Simple)?"</em> OR 
+                <em>"Is this happening right this second or today (Continuous)?"</em> Check the signal words first!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB CONTENT 4: SPELLING RULES & STATIVE VERBS -->
+        <div class="guide-tab-content" id="tab-rules">
+          <div class="guide-card main-rule-card">
+            <div class="card-top-header">
+              <span class="badge badge-amber">Grade 6 Secrets</span>
+              <h3>Spelling Rules & Stative Verbs</h3>
+            </div>
+
+            <div class="rules-two-col">
+              <!-- Left Column: Spelling rules -->
+              <div class="rule-column">
+                <h4 class="col-title">🔤 Spelling Rules for Present Simple (-s / -es)</h4>
+                <div class="rule-pill-card">
+                  <strong>Most verbs:</strong> Just add <em>-s</em>.<br>
+                  <span class="rule-sample">play &rarr; plays, read &rarr; reads, eat &rarr; eats</span>
+                </div>
+                <div class="rule-pill-card">
+                  <strong>Verbs ending in -ch, -sh, -ss, -x, -o:</strong> Add <em>-es</em>.<br>
+                  <span class="rule-sample">watch &rarr; watches, go &rarr; goes, teach &rarr; teaches</span>
+                </div>
+                <div class="rule-pill-card">
+                  <strong>Consonant + y:</strong> Change <em>y</em> to <em>-ies</em>.<br>
+                  <span class="rule-sample">study &rarr; studies, fly &rarr; flies</span>
+                </div>
+
+                <h4 class="col-title" style="margin-top: 24px;">🔤 Spelling Rules for -ing</h4>
+                <div class="rule-pill-card">
+                  <strong>Verbs ending in silent -e:</strong> Drop the <em>-e</em> and add <em>-ing</em>.<br>
+                  <span class="rule-sample">ride &rarr; riding, make &rarr; making, write &rarr; writing</span>
+                </div>
+                <div class="rule-pill-card">
+                  <strong>Short verb (Consonant + Vowel + Consonant):</strong> Double the final letter.<br>
+                  <span class="rule-sample">swim &rarr; swimming, run &rarr; running, sit &rarr; sitting</span>
+                </div>
+              </div>
+
+              <!-- Right Column: Stative verbs -->
+              <div class="rule-column">
+                <h4 class="col-title">🧠 Stative Verbs (NO -ing!)</h4>
+                <p class="guide-note">
+                  Some verbs describe <strong>feelings, thoughts, or states</strong> rather than physical actions. 
+                  These are called <em>Stative Verbs</em>. We use them in the <strong>Present Simple</strong> even if we mean right now!
+                </p>
+                <div class="stative-verbs-grid">
+                  <div class="stative-card">
+                    <span class="stative-word">understand</span>
+                    <span class="stative-good">✅ I understand now.</span>
+                    <span class="stative-bad">❌ I am understanding now.</span>
+                  </div>
+                  <div class="stative-card">
+                    <span class="stative-word">know</span>
+                    <span class="stative-good">✅ She knows the answer.</span>
+                    <span class="stative-bad">❌ She is knowing.</span>
+                  </div>
+                  <div class="stative-card">
+                    <span class="stative-word">like / love</span>
+                    <span class="stative-good">✅ They like music.</span>
+                    <span class="stative-bad">❌ They are liking music.</span>
+                  </div>
+                  <div class="stative-card">
+                    <span class="stative-word">want</span>
+                    <span class="stative-good">✅ He wants some water.</span>
+                    <span class="stative-bad">❌ He is wanting.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guide Footer CTA -->
+        <div class="guide-footer-cta">
+          <div>
+            <h3>Ready to test what you have learned?</h3>
+            <p>Challenge yourself with 30 Grade 6 grammar questions across 3 levels.</p>
+          </div>
+          <button class="btn btn-primary btn-large" id="guide-goto-test-btn">
+            Start Practice Test Now &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SECTION 3: PRACTICE TEST                       -->
+    <!-- ============================================== -->
+    <section id="test-section" class="app-section">
+      <div class="section-container">
+        
+        <!-- Test Status Bar -->
+        <div class="test-status-bar">
+          <div class="status-left">
+            <span class="badge" id="test-level-badge">Level 1: Easy</span>
+            <span class="status-q-counter" id="test-q-counter">Question 1 of 30</span>
+          </div>
+
+          <div class="status-center">
+            <div class="progress-wrap">
+              <div class="progress-info">
+                <span>Test Progress</span>
+                <span id="test-progress-percent">0%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="test-progress-fill" style="width: 3.33%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-right">
+            <div class="stat-bubble" title="Time elapsed">
+              <span class="stat-icon">⏱️</span>
+              <span id="test-timer-display">00:00</span>
+            </div>
+            <div class="stat-bubble" title="Questions answered">
+              <span class="stat-icon">✍️</span>
+              <span id="test-answered-display">0 / 30 answered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question Dots Quick Navigation Palette -->
+        <div class="q-navigator-card">
+          <div class="q-nav-header">
+            <span class="q-nav-title">Jump to Question:</span>
+            <div class="q-nav-legend">
+              <span class="legend-item"><span class="legend-dot active-dot"></span> Current</span>
+              <span class="legend-item"><span class="legend-dot answered-dot"></span> Answered</span>
+              <span class="legend-item"><span class="legend-dot unanswered-dot"></span> Unanswered</span>
+            </div>
+          </div>
+          <div class="q-dots-grid" id="q-dots-grid">
+            <!-- 30 interactive buttons generated by script.js -->
+          </div>
+        </div>
+
+        <!-- Main Question Card -->
+        <div class="question-main-card" id="question-card">
+          <!-- Question Meta Header -->
+          <div class="q-card-header">
+            <div class="q-meta-tags">
+              <span class="badge badge-easy" id="q-level-tag">Level 1: Easy</span>
+              <span class="badge badge-topic" id="q-tense-tag">Present Simple</span>
+              <span class="badge badge-type" id="q-type-tag">Multiple Choice</span>
+            </div>
+            <div class="q-num-label" id="q-card-number">Question #1</div>
+          </div>
+
+          <!-- Question Content -->
+          <div class="q-body">
+            <div class="q-instruction" id="q-instruction">Choose the correct answer to complete the sentence:</div>
+            
+            <div class="q-sentence-box" id="q-sentence-box">
+              <p class="q-sentence-text" id="q-sentence-text">She <span class="sentence-blank">_____</span> to school every day.</p>
+            </div>
+
+            <!-- Options Container (4 clickable buttons/cards) -->
+            <div class="options-grid" id="options-grid">
+              <!-- Dynamically populated options -->
+            </div>
+
+            <!-- Hint Box Container -->
+            <div class="hint-container">
+              <button class="hint-toggle-btn" id="hint-toggle-btn">
+                <span class="hint-icon">💡</span>
+                <span id="hint-toggle-text">Show Hint</span>
+              </button>
+              
+              <div class="hint-drawer hidden" id="hint-drawer">
+                <div class="hint-content">
+                  <div class="hint-tag">Grammar Clue:</div>
+                  <p id="hint-text">Signal words like "every day" describe daily routines. Look at the subject "She".</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Question Footer Navigation Controls -->
+          <div class="q-card-footer">
+            <button class="btn btn-secondary" id="btn-prev-q">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              <span>Previous</span>
+            </button>
+
+            <div class="footer-center-actions">
+              <button class="btn btn-outline-danger btn-sm" id="btn-clear-answer" title="Clear your selected answer for this question">
+                Clear Answer
+              </button>
+            </div>
+
+            <div class="footer-right-actions">
+              <button class="btn btn-secondary" id="btn-next-q">
+                <span>Next</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+
+              <button class="btn btn-success" id="btn-open-submit-modal">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Submit Test</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SECTION 4: RESULTS PAGE                        -->
+    <!-- ============================================== -->
+    <section id="results-section" class="app-section">
+      <div class="section-container">
+        
+        <!-- Score Celebration Header -->
+        <div class="results-hero-card">
+          <div class="celebration-badge" id="results-badge-icon">🎉</div>
+          <h2 class="results-greeting" id="results-greeting">Awesome Job, Student!</h2>
+          <p class="results-subtext">Here is your complete performance report for the Grade 6 English Grammar Test.</p>
+
+          <!-- Main Score Display -->
+          <div class="score-showcase">
+            <div class="score-circle">
+              <div class="score-number" id="results-score-points">0</div>
+              <div class="score-total-denom">/ 30</div>
+              <div class="score-percent-badge" id="results-score-percent">0%</div>
+            </div>
+
+            <div class="performance-message-box" id="performance-message-box">
+              <div class="perf-status-title" id="performance-status-title">Performance Summary</div>
+              <p class="perf-message-text" id="performance-message-text">Evaluating test...</p>
+            </div>
+          </div>
+
+          <!-- Key Metrics Grid -->
+          <div class="metrics-grid">
+            <div class="metric-card metric-correct">
+              <div class="metric-icon">✅</div>
+              <div class="metric-value" id="metric-correct-count">0</div>
+              <div class="metric-label">Correct Answers</div>
+            </div>
+
+            <div class="metric-card metric-incorrect">
+              <div class="metric-icon">❌</div>
+              <div class="metric-value" id="metric-incorrect-count">0</div>
+              <div class="metric-label">Incorrect Answers</div>
+            </div>
+
+            <div class="metric-card metric-time">
+              <div class="metric-icon">⏱️</div>
+              <div class="metric-value" id="metric-time-taken">00:00</div>
+              <div class="metric-label">Time Taken</div>
+            </div>
+
+            <div class="metric-card metric-accuracy">
+              <div class="metric-icon">🎯</div>
+              <div class="metric-value" id="metric-grade-band">Grade 6</div>
+              <div class="metric-label">Skill Rating</div>
+            </div>
+          </div>
+
+          <!-- Level Breakdown Row -->
+          <div class="level-breakdown-card">
+            <h4>Performance by Difficulty Level:</h4>
+            <div class="level-breakdown-grid">
+              <div class="lvl-item">
+                <span class="badge badge-easy">Level 1: Easy</span>
+                <span class="lvl-score" id="lvl-easy-score">0 / 10</span>
+              </div>
+              <div class="lvl-item">
+                <span class="badge badge-medium">Level 2: Medium</span>
+                <span class="lvl-score" id="lvl-medium-score">0 / 10</span>
+              </div>
+              <div class="lvl-item">
+                <span class="badge badge-challenge">Level 3: Challenge</span>
+                <span class="lvl-score" id="lvl-challenge-score">0 / 10</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions Bar -->
+          <div class="results-actions">
+            <button class="btn btn-primary btn-large" id="btn-restart-test">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+              </svg>
+              <span>Restart Test (New Random Order)</span>
+            </button>
+
+            <button class="btn btn-secondary" id="btn-results-open-guide">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              <span>Review Grammar Guide</span>
+            </button>
+
+            <button class="btn btn-outline" id="btn-print-results">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
+              <span>Print / Save Score</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Detailed Review Section -->
+        <div class="review-section">
+          <div class="review-header">
+            <div>
+              <h3 class="review-title">Detailed Question Review</h3>
+              <p class="review-subtitle">See which questions you got right, which ones need practice, and read the rule explanations.</p>
+            </div>
+            
+            <!-- Review Filters -->
+            <div class="review-filter-tabs">
+              <button class="filter-btn active" data-filter="all" id="filter-all-btn">All (30)</button>
+              <button class="filter-btn" data-filter="correct" id="filter-correct-btn">Correct (0)</button>
+              <button class="filter-btn" data-filter="incorrect" id="filter-incorrect-btn">Incorrect (0)</button>
+            </div>
+          </div>
+
+          <!-- Review List Container -->
+          <div class="review-cards-list" id="review-cards-list">
+            <!-- Dynamically populated by script.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Submit Confirmation Modal -->
+  <div class="modal-overlay hidden" id="submit-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="modal-icon">📝</span>
+        <h3>Ready to Submit Your Test?</h3>
+      </div>
+      <div class="modal-body">
+        <p id="modal-answered-summary">You have answered <strong>0 of 30</strong> questions.</p>
+        <div class="unanswered-warning hidden" id="modal-unanswered-alert">
+          ⚠️ <strong>Notice:</strong> You still have <span id="modal-unanswered-count">0</span> unanswered questions. Unanswered questions will be counted as incorrect.
+        </div>
+        <p class="modal-note">Once you submit, you will receive your final score and detailed explanations for all 30 questions.</p>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="modal-btn-cancel">Keep Practicing</button>
+        <button class="btn btn-success" id="modal-btn-confirm">Yes, Submit Test</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p><strong>Grade 6 English Grammar Test</strong> &bull; Present Simple &bull; Present Continuous</p>
+      <p class="footer-sub">Designed for interactive classroom learning, revision, and self-study.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
